@@ -5,9 +5,9 @@ Ezzel a parancsal, folyamatosan lehet gyűjteni a kordinátákat [E] gomb megnyo
 
 -- Mit ment ki?
 ---------------
-vector3()
-x,y,z
-['x'] = x, ['y'] = y, ['z'] = z
+vector3()<br>
+x,y,z<br>
+['x'] = x, ['y'] = y, ['z'] = z <br>
 
 
 Ennek a helye ./coords/ mappában lesz. Timebélyeggel és mentett vector névvel.
@@ -20,4 +20,7 @@ Szimpla vágólapra másolás vec4(x, y, z, h)
 
 ### /coordv3b
 Vágólapra másolás ['x'] = x, ['y'] = y, ['z'] = z
+
+### /coordv3x
+Vágólapra másolás x = x, y = y, z = z
 

@@ -104,3 +104,16 @@ RegisterCommand("coordv3bh", function()
 
 end, false)
 
+
+RegisterCommand("coordv3xyz", function() 
+    local co = {}
+
+    local plyCoords = GetEntityCoords(PlayerPedId())
+    local heading = GetEntityHeading(PlayerPedId())
+    SendNUIMessage({
+        type = 'coordv3bh',
+        coords = "x = "..ESX.Math.Round(plyCoords.x, 2) ..", y"..ESX.Math.Round(plyCoords.y,2)..", z = "..ESX.Math.Round(plyCoords.z,2)..""
+    })
+
+end, false)
+
