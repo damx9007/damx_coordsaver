@@ -65,13 +65,13 @@ RegisterCommand("coordSaving", function()
 end, false)
 
 
-RegisterCommand("vec3", function() 
+RegisterCommand("coordv3", function() 
     local co = {}
 
                 local plyCoords = GetEntityCoords(PlayerPedId())
 
                 SendNUIMessage({
-                    type = 'vec3',
+                    type = 'coordv3',
                     coords = ""..ESX.Math.Round(plyCoords.x, 2) ..","..ESX.Math.Round(plyCoords.y,2)..","..ESX.Math.Round(plyCoords.z,2)..""
                 })
 
@@ -79,28 +79,28 @@ end, false)
 
 
 
-RegisterCommand("vec3b", function() 
+RegisterCommand("coordv3b", function() 
     local co = {}
 
                 local plyCoords = GetEntityCoords(PlayerPedId())
 
                 SendNUIMessage({
-                    type = 'vec3b',
+                    type = 'coordv3b',
                     coords = "['x'] = "..ESX.Math.Round(plyCoords.x, 2) ..", ['y']"..ESX.Math.Round(plyCoords.y,2)..", ['z'] = "..ESX.Math.Round(plyCoords.z,2)..""
                 })
 
 end, false)
 
 
-RegisterCommand("vec3h", function() 
+RegisterCommand("coordv3bh", function() 
     local co = {}
 
-                local plyCoords = GetEntityCoords(PlayerPedId())
-
-                SendNUIMessage({
-                    type = 'vec3b',
-                    coords = "['x'] = "..ESX.Math.Round(plyCoords.x, 2) ..", ['y']"..ESX.Math.Round(plyCoords.y,2)..", ['z'] = "..ESX.Math.Round(plyCoords.z,2)..", ['h'] = " .. ESX.Math.Round(heading, 2)..""
-                })
+    local plyCoords = GetEntityCoords(PlayerPedId())
+    local heading = GetEntityHeading(PlayerPedId())
+    SendNUIMessage({
+        type = 'coordv3bh',
+        coords = "['x'] = "..ESX.Math.Round(plyCoords.x, 2) ..", ['y']"..ESX.Math.Round(plyCoords.y,2)..", ['z'] = "..ESX.Math.Round(plyCoords.z,2)..", ['h'] = " .. ESX.Math.Round(heading, 2)..""
+    })
 
 end, false)
 
