@@ -105,7 +105,7 @@ RegisterCommand("coordv3bh", function()
 end, false)
 
 
-RegisterCommand("coordv3xyz", function() 
+RegisterCommand("coordv3x", function() 
     local co = {}
 
     local plyCoords = GetEntityCoords(PlayerPedId())
